@@ -31,6 +31,7 @@ node {
         stage ('Tests') {                
             parallel 'static': {
                 sh "bin/grumphp run --testsuite=magento2testsuite"
+                sh "ls"
             },
             'unit': {
                 sh "magento/bin/magento dev:test:run unit"
